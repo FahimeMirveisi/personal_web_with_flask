@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyPersonalWebsite</title>
+
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <script src="https://kit.fontawesome.com/b77652ace9.js" crossorigin="anonymous"></script>
+  
+  
+</head>
+<body>
+
+  
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{ url_for('home') }}">Personal website</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ url_for('home') }}">
+                    <span class="glyphicon glyphicon-home"></span> Home</a></li>
+
+                  
+                  <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}"><span class="glyphicon glyphicon-book"></span> Blog</a></li>
+
+                  <li class="nav-item"><a class="nav-link active" href="{{ url_for('contact') }}"><span class="glyphicon glyphicon-phone"></span> Contact me</a></li>
+
+                  
+
+                  
+                  
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+
+          <div class="container mt-4"">
+
+            <div class="col-lg-10 m-auto">
+
+                <div class="card text-center">
+                    <div class="card-header">
+                      <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Contact me</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    <div class="card-body">
+
+                      <div>
+
+                        
+
+                        <div class="text-center mb-3">
+                          <h4 class="card-title">Contact me with:</h4>
+
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="#" target="_blank"><i class="fa-solid fa-phone-volume"></i></a>
+
+                            
+                          </button>
+                  
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+
+                            
+                          </button>
+                  
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                            
+                          </button>
+                  
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="https://github.com/FahimeMirveisi" target="_blank"><i class="fab fa-github"></i></a>
+
+                            
+                          </button>
+
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="https://t.me/Fahime3010" target="_blank"><i class="fab fa-telegram"></i></a>
+
+                            
+                          </button>
+
+                          <button data-mdb-ripple-init type="button" class="btn btn-floating mx-1">
+                          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                            
+                          </button>
+
+                        </div>
+                      </div>
+                      
+                      <form method="post">
+
+                        
+                        
+                        <div class="form-group input-group mb-3 mt-5">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                             </div>
+                            <input name="email" class="form-control" placeholder="Email address" type="email" aria-describedby="emailHelp">
+                        </div> <!-- form-group//email -->
+    
+    
+                        <div class="form-group input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa-solid fa-comment"></i></span>
+                            </div>
+                            <textarea class="form-control" placeholder="Message"  rows="3"></textarea>
+                        </div> <!-- form-group// message-->
+                    
+                        <button type="submit" class="btn btn-primary">send</button>
+                      </form>
+                      <!-- <a href="#" class="btn btn-primary">submit</a> -->
+                    </div>
+                  </div> <!-- my register login-->
+
+            </div>
+          </div>
+          </div>
+        
+    </div>
+    
+</div>
+
+</div>
+
+<script src="static/js/bootstrap.js"></script>
+</body>
+</html>
