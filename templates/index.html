@@ -1,159 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MyPersonalWebsite</title>
-
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-  <script src="https://kit.fontawesome.com/b77652ace9.js" crossorigin="anonymous"></script>
-  
-  
-</head>
-<body>
-
-  
-    <div class="container-fluid">
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="{{ url_for('home') }}">Personal website</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">
-                    <span class="glyphicon glyphicon-home"></span> Home</a></li>
-
-                  
-                  <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}"><span class="glyphicon glyphicon-book"></span> Blog</a></li>
-
-                  <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}"><span class="glyphicon glyphicon-phone"></span> Contact me</a></li>
-
-                  
-
-                  
-                  
-                </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-
-                
-                </ul>
-               
-              </div>
-            </div>
-          </nav>
-
-            <!-- my image-->
-          <div class="container">
-                       
-            <!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-          </div>
-
-   
-        
-
-    <div class="row">
-        <!-- image part-->
-        <div class="col-sm-6 d-flex justify-content-end">
-        <!-- <img src="static/images/fahime-pic.png" class="img-fluid" alt="fahime photo" width="800" height="500"> -->
-        <img src="static/images/fahime-pic.png" class="img-fluid" alt="fahime photo" width="500" height="300">
-        </div>
-
-        <!-- intro part-->
-        <div class="col-sm-6">
+{% extends 'layout.html' %}
 
 
-        <div >
-            <div class="row">
+{% block title%}
+  home
+{% endblock %}
 
-                <div class="col-twelve">
-
-                    <h5>Helloooo</h5>
-                    <h1><strong>I'm Fahime Mirveisi.</strong></h1>
-
-                    
-
-                    <p>
-                        <ul>
-
-                            <li>Web Developer</li>
-                            <li>AI Specialist</li> 
-
-                        </ul>
-                        
-                    </p>
-
-                    <!-- <a class="button stroke smoothscroll" href="#about" title="">More About Me</a> -->
-
-                </div>  
-                
-            </div>   		 		
-        </div> <!-- /intro-content --> 
-
-        <div class="container">
-
-            <div class="card border-primary mb-3" style="margin-right:500px;">
-                <div class="card-header"><h3>Let me introduce myself:</h3></div>
-                <div class="card-body text-primary">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text lead">I`m Fahime Mirveisi. An aspiring programmer with a passion for learning and creating.<br><br>
-                    Eager to improve my skills in AI and web programming and contribute to a collaborative team environment.<br><br>
-                  Developed a simple yet functional Personal Website. Excited to learn from experienced developers and grow my programming expertise!</p>
+{% block content %}
 
 
-                  <a class="button stroke smoothscroll" href="{{ url_for('download') }}" title=""><button type="button" class="btn btn-info"> Download CV </button></a>
-                  
-                </div>
-                       
-            
-          </div>
 
-            
+
+<div class="row">
+<!-- image part-->
+<div class="col-sm-6 d-flex justify-content-end">
+<img src="static/images/fahime-pic.png" class="img-fluid" alt="fahime photo" width="500" height="300">
+</div>
+
+<!-- intro part-->
+<div class="col-sm-6">
+
+
+<div >
+  <div class="row">
+
+      <div class="col-twelve">
+
+          <h5>Helloooo</h5>
+          <h1><strong>I'm Fahime Mirveisi.</strong></h1>
+
+
+          <p>
+              <ul>
+
+                  <li>Web Developer</li>
+                  <li>AI Specialist</li> 
+
+              </ul>
+              
+          </p>
+
           
 
-        <!-- <div class="row section-intro">
-            <div class="col-twelve">
- 
-                <h5>Resume</h5>
-                <h1>Let me introduce myself.</h1>
- 
-                <div >
- 
-                    <p class="lead">I`m Fahime Mirveisi. An aspiring programmer with a passion for learning and creating.
-                       Eager to improve my skills in AI and web programming and contribute to a collaborative team environment.
-                     Developed a simple yet functional Personal Website. Excited to learn from experienced developers and grow my programming expertise!</p>
-                </div>
-                
-                <button type="button" class="btn btn-info">
-                    Download CV  <span class="glyphicon glyphicon-download"></span></button>
- 
-            </div>   		
-        </div>  -->
-        
-        <!-- /section-intro -->
+      </div>  
+      
+  </div>   		 		
+</div> <!-- /intro-content --> 
 
-        </div>
-        
-        </div>
-        
-    </div>
+<div class="container">
 
-    </div>
+  <div class="card border-primary mb-3" style="margin-right:500px;">
+      <div class="card-header"><h3>Let me introduce myself:</h3></div>
+      <div class="card-body text-primary">
+        <h5 class="card-title"></h5>
+        <p class="card-text lead">I`m Fahime Mirveisi. An aspiring programmer with a passion for learning and creating.<br><br>
+          Eager to improve my skills in AI and web programming and contribute to a collaborative team environment.<br><br>
+        Developed a simple yet functional Personal Website. Excited to learn from experienced developers and grow my programming expertise!</p>
+
+
+        <a class="button stroke smoothscroll" href="{{ url_for('download') }}" title=""><button type="button" class="btn btn-info"> Download CV </button></a>
+        
+      </div>
+             
+  
+</div>
+
+  
+
+
+</div>
+
+</div>
+
+</div>
+{% endblock %}
+
     
-    <script src="static/js/bootstrap.js"></script>
-</body>
-</html>

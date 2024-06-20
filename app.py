@@ -1,6 +1,9 @@
 from flask import Flask, render_template, send_file, url_for, redirect
+from .database import create_db_and_tables, engine
+from sqlmodel import Field, SQLModel, create_engine, Session, select
 
 app = Flask("Fahime Personal website")
+
 
 @app.route("/")
 def my_root():
